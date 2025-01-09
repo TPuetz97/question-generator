@@ -273,7 +273,6 @@ async function fillQuestionContainerWith(text) {
   const el = document.querySelector("#question-container")
   el.innerText = ""
   let innerText = ""
-  console.log(text)
   let currentSpeed = getRandomInt(10, 50)
 
   for (let i = 0; i < text.length && currentQuestion === text; i++) {
@@ -290,7 +289,6 @@ async function fillQuestionContainerWith(text) {
 async function emptyQuestionContainer() {
   const el = document.querySelector("#question-container")
   let innerText = el.innerText
-  console.log("empty", innerText)
   let currentSpeed = getRandomInt(1, 10)
 
   while (innerText.length > 1) {
@@ -302,7 +300,6 @@ async function emptyQuestionContainer() {
     el.innerText = innerText
     await sleepAsync(currentSpeed)
   }
-  console.log("finished emptyQuestionContainer")
 }
 
 function sleepAsync(millis) {
